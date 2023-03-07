@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListTaskComponent } from './list-task/list-task.component';
+import { ListTaskComponent } from './components/list-task/list-task.component';
 
 import {HttpClientModule} from '@angular/common/http';
-import { RegisterTaskComponent } from './register-task/register-task.component'; 
+import { RegisterTaskComponent } from './components/register-task/register-task.component'; 
 import { FormsModule } from '@angular/forms';
 import { UpdateTaskComponent } from './update-task/update-task.component';
-import { DeleteTaskComponent } from './delete-task/delete-task.component';
-import { GeneratePDFComponent } from './generate-pdf/generate-pdf.component';
+import { DeleteTaskComponent } from './components/delete-task/delete-task.component';
+import { GeneratePDFComponent } from './components/generate-pdf/generate-pdf.component';
 
 @NgModule({
   declarations: [
