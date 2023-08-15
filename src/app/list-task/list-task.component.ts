@@ -19,23 +19,22 @@ export class ListTaskComponent implements OnInit{
   }
 
    getDatos(){
-    this.taskService.obtenerListaEmpleados().subscribe(dato => {
+    this.taskService.obtenerListaTareas().subscribe(dato => {
       this.taskArray = dato;
     });
   }
+
+  deleteTask(id:number){
+    this.taskService.deleteTask(id).subscribe(data => {
+      this.getDatos();
+    })
+  }
+
+  ///-------------------------------------------
 
    updateTask(id:number, task:Task){
     this.taskService.updateTask(id, task).subscribe(dato => {
       console.log(dato);
     });
-  }
-
-   deleteTask(id:number){
-    this.taskService.deleteTask(id).subscribe(data => {
-      console.log(data);
-      this.getDatos();
-    })
-     
-
   }
 }

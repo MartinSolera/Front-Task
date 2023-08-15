@@ -18,7 +18,7 @@ export class TaskService {
 
   ///-------------------------------------
 
-  obtenerListaEmpleados():Observable<Task[]>{
+  obtenerListaTareas():Observable<Task[]>{
     return this.httpClient.get<Task[]>(`${this.baseURL2}`); 
   }
 
